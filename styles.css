@@ -1,0 +1,202 @@
+.headerNav {
+  background-color: rgb(239, 239, 243);
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerhamburger {
+  display: none;
+}
+
+.headerUl {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.hamburgerIcon {
+  display: none;
+}
+@media (max-width: 769px) {
+  .headerNav {
+    display: none;
+    flex-direction: column-reverse;
+  }
+  .hamburgerIcon {
+    display: inline;
+    height: 32px;
+    width: 32px;
+  }
+  .headerhamburger {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.hoover:hover {
+  font-size: 20px;
+  color: blue;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
+}
+.item {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+@media (max-width: 427px) {
+  .container {
+    flex-direction: column;
+  }
+}
+.listitam {
+}
+.listitam:hover {
+  font-size: 20px;
+  text-decoration-line: underline;
+}
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.step {
+  border: 5px solid black;
+  height: 500px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.step1 {
+  background-color: aqua;
+}
+.step2 {
+  background-color: coral;
+}
+.step3 {
+  background-color: rgb(6, 132, 243);
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  border: 2px black solid;
+  width: 200px;
+}
+
+.inputName {
+  width: 190px;
+}
+.font {
+  font-size: 25px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.buttonDiv {
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+* {
+  box-sizing: border-box;
+}
+/* mod main */
+/* mod form */
+/* mod input */
+/* mod button */
+/* mod ul */
+/* mod li */
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: black;
+  background-color: white;
+}
+
+.form {
+  display: flex;
+  gap: 30px;
+}
+
+.taskInput:focus {
+  display: block;
+  outline: none;
+}
+.inputLabel {
+  display: flex;
+  flex-direction: column;
+}
+
+.taskButton {
+  background-color: #4caf50; /* Green color */
+  border: none; /* No border */
+  color: white; /* White text color */
+  padding: 12px 24px; /* Padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Display as inline-block */
+  font-size: 16px; /* Text size */
+  border-radius: 50px; /* Large border radius to create a pill shape */
+  cursor: pointer; /* Cursor as pointer */
+  transition: background-color 0.3s; /* Smooth color transition */
+}
+.taskButton:hover {
+  background-color: #45a049; /* Darker green */
+  font-size: 20px;
+}
+.taskButton:active {
+  background-color: #3e8e41; /* Even darker green */
+}
+
+.taskListcontainer {
+  display: flex;
+}
+.newlistItam {
+  background-color: #29f300;
+}
+.deleteButton {
+  background-color: #ffcc00; /* Gul farge */
+  border: 2px solid #ffcc00; /* Solid kantlinje med samme farge som bakgrunn */
+  color: #333; /* Mørk tekstfarge */
+  padding: 15px 30px; /* Polstring */
+  text-align: center; /* Senter tekst */
+  text-decoration: none; /* Ingen understrekning */
+  display: inline-block; /* Vis som inline-blokk */
+  font-size: 20px; /* Tekststørrelse */
+  border-radius: 50%; /* Sirkulær form */
+  transform: rotate(-45deg); /* Roter knappen med -45 grader */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Skyggeeffekt */
+  cursor: pointer; /* Muspekeren som en peker */
+  transition: all 0.3s ease; /* Jevn overgang for alle egenskaper */
+}
+.deleteButton:hover {
+  background-color: #ff9900; /* Oransje farge */
+  color: #fff; /* Hvit tekstfarge */
+  border-color: #ff9900; /* Oransje kantlinjefarge */
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3); /* Mer fremtredende skyggeeffekt */
+}
+.deleteButton:active {
+  transform: rotate(-45deg) scale(0.9); /* Reduser størrelsen litt */
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Lysere skyggeeffekt */
+}
+
+.hover:hover {
+  font-size: 20px;
+}
