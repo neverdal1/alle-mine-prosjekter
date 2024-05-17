@@ -11,32 +11,30 @@
     <header class="header">
       <nav id="nav" class="headerNav">
         <ul id="listname" class="headerUl">
-          <a id="listname" href="https://www.fontenehusetbergen.no/">
+          <a id="listname" href="">
             <li class="hoover">hjem</li>
           </a>
-
           <a
             id="listname"
-            href="https://www.fontenehusetbergen.no/om-fontenehuset/"
+            href=""
           >
             <li class="hoover">prosjekter</li>
           </a>
-
           <a
             id="listname"
-            href="https://www.fontenehusetbergen.no/om-fontenehuset/"
+            href=""
           >
             <li class="hoover">kontakt</li>
           </a>
-
           <a
             id="listname"
-            href="https://www.fontenehusetbergen.no/om-fontenehuset/"
+            href=""
           >
             <li class="hoover">om oss</li>
           </a>
         </ul>
       </nav>
+      
 
       <img
         id="hamburgerIcon"
@@ -48,75 +46,84 @@
   </section>
 
   <section class="section">
-    <div class="galleri">
-      <h1>Galleri</h1>
-      <img class="img" src="IMG_1820.JPG" alt="Bilde 1" />
-      <img class="img" src="IMG_1824.JPG" alt="Bilde 2" />
-      <img class="img" src="IMG_1844.JPG" alt="Bilde 3" />
-      <img class="img" src="IMG_1918.JPG" alt="wirlpool" />
+    <div>
+      <h3 class="prosjekter">prosjekt 1</h3>
+      <div class="galleri">
+        <h1>Galleri</h1>
+        <img class="img" src="wow1.jpg" alt="Bilde 1" />
+        <img class="img" src="wow2.jpg" alt="Bilde 2" />
+        <img class="img" src="wow3.jpg" alt="Bilde 3" />
+        <img class="img" src="wow4.jpg" alt="wirlpool" />
+      </div>
     </div>
+    
   </section>
+ 
   <section class="section">
-    <form>
-      <!-- motta ett navn -->
-      <section class="section">
-        <div id="step" class="step step1">
-          <!-- topp -->
-          <div aria-hidden="true"></div>
-          <!-- middel -->
-          <div class="inputContainer">
-            <label class="font" class="font" for="step1">write your name</label>
-            <input class="inputName" type="text" name="" id="|" />
-          </div>
-          <!-- bunn-seksjon -->
-
-          <div class="buttonDiv">
+    <div>
+      <h3 class="prosjekter">prosjekt 2</h3>
+      <form class="skjema">
+        <!-- motta ett navn -->
+        <section class="section">
+          <div id="step" class="step step1">
+            <!-- topp -->
             <div aria-hidden="true"></div>
-            <button id="nextButton">next</button>
+            <!-- middel -->
+            <div class="inputContainer">
+              <label class="font" class="font" for="step1">write your name</label>
+              <input class="inputName" type="text" name="" id="|" />
+            </div>
+            <!-- bunn-seksjon -->
+  
+            <div class="buttonDiv">
+              <div aria-hidden="true"></div>
+              <button id="nextButton">next</button>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <!-- kontakt informasjon -->
-
-      <section class="section">
-        <div id="step" class="step step2">
-          <div aria-hidden="true"></div>
-          <div class="inputContainer">
-            <label class="font" for="step2">write your email</label>
-            <input type="email" name="" id="step2" />
+        </section>
+  
+        <!-- kontakt informasjon -->
+  
+        <section class="section">
+          <div id="step" class="step step2">
+            <div aria-hidden="true"></div>
+            <div class="inputContainer">
+              <label class="font" for="step2">write your email</label>
+              <input type="email" name="" id="step2" />
+            </div>
+  
+            <div class="buttonDiv">
+              <button id="previousButton">previous</button>
+              <button id="nextButton">next</button>
+            </div>
           </div>
-
-          <div class="buttonDiv">
-            <button id="previousButton">previous</button>
-            <button id="nextButton">next</button>
+        </section>
+  
+        <!-- takk for melding -->
+  
+        <section class="section">
+          <div id="step" class="step step3">
+            <div aria-hidden="true"></div>
+            <div class="inputContainer">
+              <label class="font" for="step3">write a message</label>
+              <textarea name="" id="step3" cols="30" rows="10"></textarea>
+            </div>
+  
+            <div class="buttonDiv">
+              <button id="previousButton" class="prewious">previous</button>
+              <button id="nextButton" class="next">next</button>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <!-- takk for melding -->
-
-      <section class="section">
-        <div id="step" class="step step3">
-          <div aria-hidden="true"></div>
-          <div class="inputContainer">
-            <label class="font" for="step3">write a message</label>
-            <textarea name="" id="step3" cols="30" rows="10"></textarea>
+        </section>
+  
+        <section class="section">
+          <div id="step">
+            <h3>thanks for submitting</h3>
           </div>
-
-          <div class="buttonDiv">
-            <button id="previousButton" class="prewious">previous</button>
-            <button id="nextButton" class="next">next</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div id="step">
-          <h3>thanks for submitting</h3>
-        </div>
-      </section>
-    </form>
+        </section>
+      
+    </div>
+   </form>
   </section>
   <section  class="section">
   <main class="main">
@@ -137,41 +144,85 @@
    -DOM manipulation connecting step 1-3-->
 
    
-<main>
-  <form class="form">
+<section>
+  <div>
+    <h3 class="prosjekter">prosjekt 3</h3>
+    <form class="form">
     
-    <div class="inputLabel">
-
-    '  <label for="taskInput">write a todo</label>
-
-        <input class="taskInput" 
-            type="text" 
-            name="taskInput" 
-            id="taskInput">
-          
-    </div>
-        <button class="taskButton" 
-           id="taskButton">add todo
-        </button>
+      <div class="inputLabel">
   
-    </form>
- 
-  <ul id="taskList"
-      class="tas">
-
-    <div id ="taskListcontainer"
-         class="taskListcontainer">
+      '  <label for="taskInput">write a todo</label>
+  
+          <input class="taskInput" 
+              type="text" 
+              name="taskInput" 
+              id="taskInput">
+            
+      </div>
+          <button class="taskButton" 
+             id="taskButton">add todo
+          </button>
     
-      <li class="newlistItam">walk the dog</li>
-      <button class="deleteButton">delete todo</button>
+      </form>
+   
+    <ul id="taskList"
+        class="tas">
+  
+      <div id ="taskListcontainer"
+           class="taskListcontainer">
+      
+        <li class="newlistItam">walk the dog</li>
+        <button class="deleteButton">delete todo</button>
+  
+      </div>
+    </ul>
+   </main></section>
 
-    </div>
-  </ul>
- </main></section>
 
-  <body>
-    <nav></nav>
 
-    <main></main>
+
+
+   <section>
+    <h3 class="prosjekter">prosjekt 4</h3>
+    <form>
+      <label>
+          <input class="inputValue" id="inputValue" type="text" placeholder="Enter value">
+      </label>
+  
+      <label for="fromValue">Konverter fra</label>
+      <select class="parameterbox" name="fromValue" id="fromValue">
+          <option value="CM">CM</option>
+          <option value="M">M</option>
+          <option value="KM">KM</option>
+      </select>
+  
+      <label for="toValue">Konverter til</label>
+      <select class="parameterbox" name="toValue" id="toValue">
+          <option value="CM">CM</option>
+          <option value="M">M</option>
+          <option value="KM">KM</option>
+      </select>
+  </form>
+  
+  <button class="button" id="submitValue">Konverter</button>
+  
+  <p id="displayValue"></p>
+
+  </div>
+</section>
+  
+
+
+ </section>
+ <section>
+  <h3 class="prosjekter">prosjekt 5</h3>
+  <h1 class="animated-name">Made by Arild Neverdal</h1>
+ </section>
+
+    <body>
+    <footer>
+      <img  class="hover" src="github picture.jpg" alt="">
+        <a href="https://github.com/"></a>
+    </footer>
   </body>
 </html>

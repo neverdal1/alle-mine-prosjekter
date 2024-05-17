@@ -1,146 +1,182 @@
-console.log('Hello!');
+const submitValue = document.querySelector("#submitValue");
+console.log(submitValue);
 
-const hamburgerIcon = document.querySelector('#hamburgerIcon');
-console.log(hamburgerIcon);
 
-function hamburgermeny() {
-  const nav = document.querySelector('#nav');
-  console.log(nav);
-  nav.classList.toggle('headerhamburger');
-  console.log('clicked');
+// submitvalue viser den konverterte verdien (kalkuleringen)
+submitValue.addEventListener("click", () =>{
+  
+//   queryselector() henter noe fra html
+    const inputValue = document.querySelector("#inputValue").value;
+    console.log(inputValue) 
+    
+    
+    //   queryselector() henter noe fra html
+    const displayValue = document.querySelector("#displayValue");
+console.log(displayValue);
+
+
+// .value er at vi henter verdi/innhold til element
+displayValue.textContent = inputValue;
+
+
+// .value er at vi henter verdi/innhold til element
+const fromValue = document.querySelector("#fromValue").value;
+console.log(fromValue);
+
+
+// .value er at vi henter verdi/innhold til element
+const toValue = document.querySelector("#toValue").value;
+console.log (toValue);
+
+
+
+
+// formel liste i else if
+let result; 
+
+
+if (fromValue === "CM"& toValue === "M") {
+    // kalkulering 
+    result = inputValue / 100;
+
+}
+else if (fromValue === "CM" & toValue === "KM") {
+    //  kalkulering
+    result = inputValue / 100000
+    
+}
+else if(fromValue === "M" & toValue === "CM") {
+    // kalkulering
+    result = inputValue * 100
+}
+    
+
+else if (fromValue === "M" & toValue === "KM") {
+ // kalkulering
+ result = inputValue / 1000
+}
+   
+  
+else if (fromValue === "KM" & toValue === "CM") {
+     // kalkulering
+     result = inputValue * 100000
+     
+    }
+else if (fromValue === "KM" & toValue === "M") {
+     // kalkulering
+     result = inputValue  * 1000
+}
+  
+else {
+
+    console.log (" choose two different options!")
 }
 
-hamburgerIcon.addEventListener('click', hamburgermeny);
+displayValue.textContent = result;
+});
+const todoTask = [];
+//starten på heile koden 
+function addtodoTask(){
+// nettsiden ikkje restarter når knappen er trykket på
+event.preventDefault();
 
-const listname = document.querySelector('#listname');
-console.log(listname);
+//henter innhold fra "input boble"
+const taskInput = document.querySelector("#taskInput").value;
 
-//lager element i html
-const lihjem = document.createElement('li');
-lihjem.classList.add('listitam');
 
-const liprosjekter = document.createElement('li');
-liprosjekter.classList.add('listitam');
+//fra input til array
+todoTask.push(taskInput);
 
-const likontakt = document.createElement('li');
-likontakt.classList.add('listitam');
+// henter info fra "input bobla" og sender den som log i "console"
+console.log(todoTask);
 
-const liomoss = document.createElement('li');
-liomoss.classList.add('listitam');
 
-//modifiserer synlig i html
-lihjem.textContent = 'hjem';
-liprosjekter.textContent = 'prosjekter';
-likontakt.textContent = 'kontakt';
-liomoss.textContent = 'om oss';
 
-// sendt inn i html
-listname.appendChild(lihjem);
-listname.appendChild(likontakt);
-listname.appendChild(liprosjekter);
-listname.appendChild(liomoss);
+// forloop that loops our Array
+// loops trough our array and checks for new data
 
-function addTodo(){
+//sjekker om array har fått verdi
+for(
+let index = 0;
+index < todoTask.length;
+index = index + 1 
 
-    
+){
+
+//henta informasjon fra loop ved hjelp av index
+const newTodoTask = todoTask[index]
+
+
+
+//laga ett nytt element i html
+const newlistItam = document.createElement("li")
+console.log(newlistItam);
+// der går og skjekker om verdi fra todotask 
+newlistItam.textContent = todoTask;
+
+
+//henter div elementet i ul 
+const taskListcontainer = document.querySelector("#taskList");
+console.log(taskListcontainer);
+
+//her legger vi til modifisering(css)
+newlistItam.classList.add("newlistItam");
+
+// å lage en knapp som sletter gjøremålet 
+const deleteButton = document.createElement("button")
+console.log(deleteButton);
+
+deleteButton.textContent = "delete todo"
+deleteButton.classList.add("deleteButton");
+deleteButton.addEventListener("click",function () {
+   
+    console.log("click?") ; 
+
+    newlistItam.remove();
+    deleteButton.remove();
+}) // her avslutter delete knappen
+
+//dette sendes tilbake til HTML :
+taskListcontainer.appendChild(deleteButton);
+taskListcontainer.appendChild(newlistItam);
+
+}
+}
+
+const taskButton = document.querySelector("#taskButton");
+console.log(taskButton);
+
+taskButton.addEventListener("click",addtodoTask);
+
+function nextStep(){
   event.preventDefault();
-console.log("button clicked")
-// const = er å erklære en verdi 
-//taskinputdata er et variabelt navn
-//  = å erklære en verdi som skal lagres
-//  document referer til html.document
-// queryselector() henter noe fra html
-// #taskinput er id-navnet til element vi henter fra html
-// .value er at vi henter verdi/innhold til element
-// ; betyr full stopp av comando.
-const taskInputData = document.querySelector("#taskInput").value;
-console.log (taskInputData)
-// const = erklæring (henter noe)
-const newListItem = document.createElement("li");
-console.log(newListItem)
-// modifiserer manipulerer 
-newListItem.textContent = taskInputData;
-newListItem.classList.add("newlistItam");
 
-const taskList = document.querySelector("#taskList");
-console.log(taskList)
+  let currentStep = 1;
 
+  if (currentStep < 4) {
 
-taskList.appendChild(newListItem);
+      document.querySelector(`#step${currentStep}`).classList.add("hidden");
+
+      currentStep = currentStep + 1;
+
+      document.querySelector(`step${currentStep}`).classList.remove("hidden");
+  }
 }
 
-const taskButton = document.querySelector("#taskButton");
-console.log(taskButton)
+// prviousStep
+function previousStep(){
+  event.preventDefault();
 
-taskButton.addEventListener("click",addTodo);
+  let currentStep = 1;
 
+  if (currentStep > 1) {
 
-//hører til navbar 
-let menu = document.querySelector(".menu"),
-  toggle = document.querySelector(".menu-toggle");
+      document.querySelector(`#step${currentStep}`).classList.add("hidden");
 
-function toggleToggle() {
-toggle.classList.toggle("menu-open");
-};
+      currentStep = currentStep - 1;
 
-function toggleMenu() {
-menu.classList.toggle("active");
-};
-
-toggle.addEventListener("click", toggleToggle, false);
-toggle.addEventListener("click", toggleMenu, false);
-
-taskListcontainer.appendChild(newListItem);
-console.log(taskListcontain
-  function addTodo(){
-
-    
-    event.preventDefault();
-console.log("button clicked")
-// const = er å erklære en verdi 
-//taskinputdata er et variabelt navn
-//  = å erklære en verdi som skal lagres
-//  document referer til html.document
-// queryselector() henter noe fra html
-// #taskinput er id-navnet til element vi henter fra html
-// .value er at vi henter verdi/innhold til element
-// ; betyr full stopp av comando.
-const taskInputData = document.querySelector("#taskInput").value;
-console.log (taskInputData)
-// const = erklæring (henter noe)
-const newListItem = document.createElement("li");
-console.log(newListItem)
-// modifiserer manipulerer 
-newListItem.textContent = taskInputData;
-newListItem.classList.add("newlistItam");
-
-const taskList = document.querySelector("#taskList");
-console.log(taskList)
-
-
-taskList.appendChild(newListItem);
+      document.querySelector(`step${currentStep}`).classList.remove("hidden")
 }
-
-const taskButton = document.querySelector("#taskButton");
-console.log(taskButton)
-
-taskButton.addEventListener("click",addTodo);
-
-
-//hører til navbar 
-let menu = document.querySelector(".menu"),
-    toggle = document.querySelector(".menu-toggle");
-
-function toggleToggle() {
-  toggle.classList.toggle("menu-open");
-};
-
-function toggleMenu() {
-  menu.classList.toggle("active");
-};
-
-toggle.addEventListener("click", toggleToggle, false);
-toggle.addEventListener("click", toggleMenu, false);
-
-taskListcontainer.appendChild(newListItem);
-console.log(taskListcontain
+}
+import {nextButton, previousButton}from "./eventListner.js";
+export {nextStep, previousStep};
