@@ -54,8 +54,7 @@
     flex-direction: column;
   }
 }
-.listitam {
-}
+
 .listitam:hover {
   font-size: 20px;
   text-decoration-line: underline;
@@ -126,7 +125,7 @@ body {
   margin: 0;
   font-family: system-ui, sans-serif;
   color: black;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
@@ -387,14 +386,9 @@ p#displayValue {
       flex-direction: column;
     }
   }
-  .listitam{
-    
-  }
-  .listitam:hover{
-    font-size: 20px;
-    text-decoration-line: underline;
   
-  }
+
+  
   @keyframes colorChange {
     0% { color: rgb(240, 248, 19); }
     25% { color: rgb(61, 253, 247); }
@@ -421,4 +415,30 @@ p#displayValue {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.button{
+  justify-content: center;
+  align-content: center;
+}
+.prosjekter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+.card{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.display{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
 }

@@ -74,6 +74,11 @@ else {
 
 displayValue.textContent = result;
 });
+
+
+
+
+
 const todoTask = [];
 //starten på heile koden 
 function addtodoTask(){
@@ -142,6 +147,10 @@ taskListcontainer.appendChild(newlistItam);
 
 }
 }
+
+
+
+
 
 const taskButton = document.querySelector("#taskButton");
 console.log(taskButton);
