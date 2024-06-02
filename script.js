@@ -1,3 +1,7 @@
+function toggleBackground() {
+    document.body.classList.toggle('dark-mode');
+}
+
 const submitValue = document.querySelector("#submitValue");
 console.log(submitValue);
 
