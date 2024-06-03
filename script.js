@@ -1,6 +1,13 @@
-function toggleBackground() {
-    document.body.classList.toggle('dark-mode');
+document.getElementById('theme-switch').addEventListener('click', function() {
+    document.body.classList.toggle('dark-theme');
+    document.body.classList.toggle('light-theme');
+});
+
+// Initialize with light theme
+if (!document.body.classList.contains('dark-theme') && !document.body.classList.contains('light-theme')) {
+    document.body.classList.add('light-theme');
 }
+
 
 const submitValue = document.querySelector("#submitValue");
 console.log(submitValue);
